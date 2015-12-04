@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Music show</title>
+	<meta charset="utf-8">
+	<script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css">
+	<script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+	<div class="btn-register" >
+		<input type="button" id="btnRegister" value="New registration" title="Click here to make new regestration">
+	</div>
+	<div class="registered-table">
+		<table class="students-list">
+
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email </th>
+					<th>Date of birth </th>
+					<th>Type of seat</th>
+					<th>Food preference</th>
+					<th>Phone number</th>
+					<th>Arrival time</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+			</tbody>
+			<tfoot></tfoot>
+		</table>
+	</div>
+	
+	<div id="dialog-form" title="Registration" >
+		<div class="form-main-div">
+				<form class="horizontal" action="#" method="post">
+					<div class="form-element">
+						<div class="left-label">
+							<label for="txtName">Name</label>
+						</div>
+						<div class="form-control">
+							<input type="text" name="Name" id="txtName">
+						</div>
+					</div>
+					<div class="form-element">
+						<div class="left-label">
+							<label for="txtEmail">Email</label>
+						</div>
+						<div class="form-control">
+							<input type="text" name="email" id="txtEmail">
+						</div>
+					</div>
+					<div class="form-element">
+						<div class="left-label">
+							<label for="txtDob">Date of birth[DD-MM-YYYY]</label>
+						</div>
+						<div class="form-control">
+							<input type="text" name="dateofbirth" id="txtDob" maxlength="10">
+						</div>
+					</div>
+					<div class="form-element">
+						<div class="left-label">
+							<label>Type of seat</label>
+						</div>
+						<div class="form-control">
+							<div id="radio">
+								<input type="radio" id="rdoPremium" name="seat" value="premium">
+								<label for="rdoPremium">Premium</label>
+								<input type="radio" id="rdoNormal" name="seat" checked="checked" value="normal">
+								<label for="rdoNormal">Normal</label>
+							</div>				
+						</div>
+					</div>
+					
+					<div class="form-element">
+						<div class="left-label">
+							<label>Food preferance</label>
+						</div>
+						<div class="form-control">
+							<div id="radioTwo">
+								<input type="radio" id="rdoVeg" name="food" value="vegetarian">
+								<label for="rdoVeg">Vegetarian</label>
+								<input type="radio" id="rdoNonVeg" name="food" checked="checked" value="nonvegetarian">
+								<label for="rdoNonVeg">Non-Vegetarian</label>
+							</div>				
+						</div>	
+					</div>
+					<div class="form-element">
+						<div class="left-label">
+							<label for="txtPhone">Phone</label>
+						</div>
+						<div class="form-control">
+							<input type="text" name="phone" id="txtPhone"maxlength="10">
+						</div>
+					</div>
+					<div class="form-element">
+						<div class="left-label">
+							<label for="txtTime">Arrival time</label>
+						</div>
+						<div class="form-control">
+							<input type="number" name="time" id="txtTime" max="23"min="0">
+						</div>
+					</div>
+					<div class="btn-container">
+						<input type="submit" value="Register!" id="submitBtn" class="btn">
+						<input type="reset" value="Clear" id="btnClear" class="btn">
+					</div>
+				</form>
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Bus Ticketing</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<div class="main-container">
+		<div class="nav-bar">
+			<div class="booking-tab">Booking</div>
+			<div class="payment-tab">Payment</div>
+			<div class="confirm-tab">Confirm</div>
+		</div>
+		<div class="bookings-container">
+			<div class="payment-div">
+				<label>Pick a date for booking</label>
+				<input type="text" id="datePicker" class="date-picker">
+				<input type="submit" id="submitBtn" value="Pay now" class="btn">
+				<div id="payNowError" class="error-border error-msg"> </div>
+			</div>
+			<div class="color-code">
+				<div class="vacant-color-code"></div><span>-Vacant</span>
+				<div class="booked-color-code"></div><span>-Already booked</span>
+				<div class="selected-color-code"></div><span>-Current selected seats</span>
+			</div>
+			<div class="bus-container">
+				<div class="window-row">
+					<div class="seat" id="1">1</div>
+					<div class="seat" id="3">3</div>
+					<div class="seat" id="5">5</div>
+					<div class="seat" id="7">7</div>
+					<div class="seat" id="9">9</div>
+				</div>
+				<div class="general-row">
+					<div class="seat" id="2">2</div>
+					<div class="seat" id="4">4</div>
+					<div class="seat" id="6">6</div>
+					<div class="seat" id="8">8</div>
+					<div class="seat" id="10">10</div>
+				</div>
+				<div class="general-row gap-row">
+					<div class="seat" id="11">11</div>
+					<div class="seat" id="13">13</div>
+					<div class="seat" id="15">15</div>
+					<div class="seat" id="17">17</div>
+					<div class="seat" id="19">19</div>
+				</div>
+				<div class="window-row">
+					<div class="seat" id="12">12</div>
+					<div class="seat" id="14">14</div>
+					<div class="seat" id="16">16</div>
+					<div class="seat" id="18">18</div>
+					<div class="seat" id="20">20</div>
+				</div>
+			</div>
+		</div>
+		<div class="payment-container">
+			<div class="form-main-div">
+				<form class="horizontal" action="#" method="post">
+					<div class="form-element">
+						<div class="left-label">
+							<label for="txtName">Name</label>
+						</div>
+						<div class="form-control">
+							<input type="text" name="firstname" id="txtName">
+						</div>
+					</div>
+					<div class="form-element">
+						<div class="left-label">
+							<label for="txtCardNumber">Card Number</label>
+						</div>
+						<div class="form-control">
+							<input type="text" name="cardnumber" id="txtCardNmber" maxlength="14">
+						</div>
+					</div>
+					<div class="form-element">
+						<div class="left-label">
+							<label for="txtExpiryDate">Expiry Date</label>
+						</div>
+						<div class="form-control">
+							<input type="text" name="expiryDate" id="txtExpiryDate">
+						</div>
+					</div>
+					<div class="form-element">
+						<div class="left-label">
+							<label for="txtCVVNumber">CVV Number</label>
+						</div>
+						<div class="form-control">
+							<input type="text" name="cardnumber" id="txtCVVNumber" maxlength="4">
+						</div>
+					</div>
+					<div class="btn-container">
+						<input type="submit" value="Confirm" id="confirmBtn" class="btn">
+						<input type="reset" value="Clear" id="clearBtn" class="btn">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="confirm-container">
+			<input type="submit" value="Confirm Booking" id="finalSubmit" class="btn">
+		</div>
+	</div>
+</body>
+
+</html>

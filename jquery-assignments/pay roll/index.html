@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pay roll Application</title>
+  <meta charset="utf-8">
+  <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+  <script src="js/script.js" type="text/javascript"></script>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css">
+  <script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+  <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Add worker</a></li>
+      <li><a href="#tabs-2">Modify the Tiers and cities</a></li>
+      <li><a href="#tabs-3">View a Muncipality</a></li>
+    </ul>
+
+    <div id="tabs-1">
+      <h2>Add worker</h2>
+      <form id="addNewWorker">
+        <div class="form-element">
+          <div class="left-label">
+            <label for="txtName">Enter Name of worker*</label>
+          </div>
+          <div class="form-control">
+            <input type="text" name="name" id="txtName" maxlength="50">
+          </div>
+        </div>
+        <div class="form-element">
+          <div class="left-label">
+            <label for="ddlCity">Choose city * </label>
+          </div>
+          <select name="cityName" id="ddlCity" class="ddl-cities">
+
+          </select>
+        </div>
+        <div class="form-element">
+          <div class="left-label">
+            <label for="ddlWork">Choose type of work * </label>
+          </div>
+          <select name="work" id="ddlWork">
+
+          </select>
+        </div>
+        <input type="reset" id="resetBtn">
+        <input type="button" value="Add" id="addWorkerBtn" class="btn">
+      </form>
+      <div id="salaryDisplay"></div>
+    </div>
+
+    <div id="tabs-2">
+      <h2>Modify the Tiers and cities</h2>
+
+    </div>
+    <div id="tabs-3">
+      <h2>View a Muncipality</h2>
+      <div class="form-element">
+        <div class="left-label">
+          <label for="ddlViewCity">Choose city * </label>
+        </div>
+        <select name="cityName" id="ddlViewCity" class="ddl-cities">
+
+        </select>
+      </div>
+      <table class="muncipal-list" id="muncipalityDisplay">
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>work</th>
+            <th>salary</th>
+            <th>City</th>
+            <th>change City</th>
+            <th>Delete worker</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+      <div id="dialogModifyWorker">
+        <div class="worker-details-confirm"></div>
+        <div class="form-element">
+          <div class="left-label">
+            <label for="ddlModifiedCity">Choose city * </label>
+          </div>
+          <select name="cityName" id="ddlModifiedCity" class="ddl-cities">
+
+          </select>
+        </div>
+        <input type="button" value="modify" id="modifyCityId">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Chokha car</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div class="main-container">
+		<div class="nav-bar">
+			<div><div class="choose-tab nav"></div><div><label>Choose your car</label></div></div>
+			<div><div class="details-tab nav"></div><div><label>Enter your details</label></div></div>
+			<div><div class="checkout-tab nav"></div><div><label>Checkout</label></div></div>
+		</div>
+		<div class="choose-your-car">
+			<div class="form-element">
+				<div class="left-label">
+					<label for="ddlYearManu">Min year of Manufacture * </label>
+				</div>
+				<select name="yearmanufacture" id="ddlYearManu">
+
+				</select>
+			</div>
+			<div class="form-element">
+				<div class="left-label">
+					<label for="ddlCarMake">Car make * </label>
+				</div>
+				<select name="carmake" id="ddlCarMake">
+
+				</select>
+			</div>
+			<div class="form-element">
+				<div class="left-label">
+					<label for="ddlCarModel">Car Model * </label>
+				</div>
+				<select name="carmodel" id="ddlCarModel">
+
+				</select>
+			</div>
+			<input type="button" value="Filter" id="filterBtn" class="btn">
+			<div>
+				<table class="cars-list" id="filteredCars">
+					<thead>
+						<tr>
+							<th>select</th>
+							<th>Car</th>
+							<th>Color</th>
+							<th>Price (Rs)</th>
+							<th>Km's driven </th>
+						</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+
+				<input type="button" value="Next" id="nextBtn" class="btn">
+				<div>
+				</div>
+			</div>
+		</div>
+		<div class="enter-details">
+			<div id="purchseCarDetails">
+				<div id="purchaseCarDetails">
+				</div>
+				<!-- ****************form started here ************-->
+				<div class="form-main-div">
+
+					<form class="horizontal" action="#" method="post">
+						<label>Note: Date of Delivery is minimum of 3 months</label>
+						<div class="form-element">
+							<div class="left-label">
+								<label for="txtFullName">Full name *</label>
+							</div>
+							<div class="form-control">
+								<input type="text" name="fullName" id="txtFullName" maxlength="50">
+							</div>
+						</div>
+						<div class="form-element">
+							<div class="left-label">
+								<label for="txtEmail">Email *</label>
+							</div>
+							<div class="form-control">
+								<input type="text" name="email" id="txtEmail">
+							</div>
+						</div>
+						<div class="form-element">
+							<div class="left-label">
+								<label for="txtPhone">Phone</label>
+							</div>
+							<div class="form-control">
+								<input type="text" name="phone" id="txtPhone" maxlength="10">
+							</div>
+						</div>
+						<div class="form-element">
+							<div class="left-label">
+								<label for="txtAddress">Address *</label>
+							</div>
+							<div class="form-control">
+								<textarea class="address-area" id="txtAddress" maxlength="400">
+								</textarea>
+							</div>
+						</div>
+						<div class="form-element">
+							<div class="left-label">
+								<label for="txtDelivery">Date of delivery*</label>
+							</div>
+							<div class="form-control">
+								<input type="text" name="dateofdelivery" id="txtDelivery">
+							</div>
+						</div>
+						<div class="form-element">
+							<div class="left-label">
+								<label for="txtLicense">License *</label>
+							</div>
+							<div class="form-control">
+								<input type="text" name="license" id="txtLicense" maxlength="12">
+							</div>
+						</div>
+						<div class="btn-container">
+							<input type="button" value="previous" id="previousBtn" class="btn">
+							<input type="submit" value="Next" id="submitBtn" class="btn">
+						</div>
+
+					</form>
+				</div>
+			</div>
+			<!-- *****************form ended****************** -->
+		</div>
+		<div class="checkOut-details">
+			<div class="payment-container">
+				<table  class="cars-list" id="personDetails">
+					<thead>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+				<div class="form-main-div">
+
+					<form class="horizontal" action="#" method="post">
+
+						<div class="form-element">
+							<div class="left-label">
+								<label for="txtCardNumber">Card Number</label>
+							</div>
+							<div class="form-control">
+								<input type="text" name="cardnumber" id="txtCardNmber" maxlength="14">
+							</div>
+						</div>
+						<div class="form-element">
+							<div class="left-label">
+								<label for="txtExpiryDate">Expiry Date</label>
+							</div>
+							<div class="form-control">
+								<input type="text" name="expiryDate" id="txtExpiryDate">
+							</div>
+						</div>
+						<div class="form-element">
+							<div class="left-label">
+								<label for="txtCVVNumber">CVV Number</label>
+							</div>
+							<div class="form-control">
+								<input type="text" name="cardnumber" id="txtCVVNumber" maxlength="4">
+							</div>
+						</div>
+						<div class="btn-container">
+							<input type="button" value="Previous" id="previousCheckOutBtn" class="btn">
+							<input type="submit" value="Pay" id="payBtn" class="btn">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="dialog-confirm" title="Reach you soon">
+			</div>
+		</div>
+	</div>
+	
+</body>
+
+</html>
